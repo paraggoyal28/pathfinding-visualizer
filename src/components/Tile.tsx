@@ -53,8 +53,8 @@ export function Tile({ row,
     }
 
     const borderStyle =
-        row === MAX_ROWS - 1 ? "border-b" : col === 0 ? "border-l" : "";
-    const edgeStyle = row === MAX_ROWS - 1 && col === 0 ? "border-l" : "";
+        row === MAX_ROWS - 2 ? "border-b" : col === 0 ? "border-l" : "";
+    const edgeStyle = row === MAX_ROWS - 2 && col === 0 ? "border-l" : "";
 
     return (
         <div

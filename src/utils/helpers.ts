@@ -29,7 +29,7 @@ export const createGrid = (startTile: TileType, endTile: TileType): GridType => 
 
 export const checkIfStartOrEnd = (row: Number, col: Number) => {
     return (
-        (row === 1 && col === 1) || (row === MAX_ROWS - 1 && col === MAX_COLS - 1)
+        (row === 1 && col === 1) || (row === MAX_ROWS - 2 && col === MAX_COLS - 2)
     );
 };
 
@@ -42,4 +42,22 @@ export const createNewGrid = (grid: GridType, row: Number, col: Number) => {
 
     newGrid[row.valueOf()][col.valueOf()] = newTile;
     return newGrid;
+};
+
+export const isEqual = (a: TileType, b: TileType) => {
+    return a.row === b.row && a.col === b.col;
+}
+
+export const isRowColEqual = (row: Number, col: Number, tile: TileType) => {
+    return row === tile.row && col === tile.col;
+}
+
+export const sleep = (ms: number) => {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+export const getRandInt = (min: number, max: number) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
 };

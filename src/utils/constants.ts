@@ -1,4 +1,4 @@
-import type { MazeSelectType, TileType } from "./types";
+import type { MazeSelectType, TileType, SpeedSelectType, AlgorithmSelectType } from "./types";
 
 export const MAX_ROWS = 39;
 export const MAX_COLS = 49;
@@ -17,8 +17,8 @@ export const START_TILE_CONFIGURATION: TileType = {
 };
 
 export const END_TILE_CONFIGURATION: TileType = {
-    row: MAX_ROWS - 1,
-    col: MAX_COLS - 1,
+    row: MAX_ROWS - 2,
+    col: MAX_COLS - 2,
     isEnd: false,
     isWall: false,
     isPath: false,
@@ -40,3 +40,19 @@ export const MAZES: MazeSelectType[] = [
     { name: "Binary Tree", value: "BINARY_TREE" },
     { name: "Recursive Division", value: "RECURSIVE_DIVISION" }
 ]
+
+export const PATHFINDING_ALGORITHMS: AlgorithmSelectType[] = [
+    { name: "Dijkstra", value: "DIJKSTRA" },
+    { name: "A-Star", value: "A_STAR" },
+    { name: "Breath First Search", value: "BFS" },
+    { name: "Depth First Search", value: "DFS" },
+];
+
+export const SPEEDS: SpeedSelectType[] = [
+    { name: "Slow", value: 2 },
+    { name: "Medium", value: 1 },
+    { name: "Fast", value: 0.5 },
+];
+
+export const SLEEP_TIME = 8;
+export const EXTENDED_SLEEP_TIME = 30;
