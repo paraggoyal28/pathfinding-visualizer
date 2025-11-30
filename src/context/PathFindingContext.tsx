@@ -18,7 +18,7 @@ export const PathFindingContext = createContext<IPathFindingContext | undefined>
 
 export const PathFindingProvider = ({ children }: { children: ReactNode }) => {
     const [algorithm, setAlgorithm] = useState<AlgorithmType>("BFS");
-    const [maze, setMaze] = useState<MazeType>("None");
+    const [maze, setMaze] = useState<MazeType>("NONE");
     const [grid, setGrid] = useState<GridType>(
         createGrid(START_TILE_CONFIGURATION, END_TILE_CONFIGURATION));
     const [isGraphVisualized, setIsGraphVisualized] = useState<boolean>(false);

@@ -1,4 +1,4 @@
-import { aStar } from "../lib/algorithms/pathFinding/astar";
+import { aStar } from "../lib/algorithms/pathFinding/aStar";
 import { bfs } from "../lib/algorithms/pathFinding/bfs";
 import { dfs } from "../lib/algorithms/pathFinding/dfs";
 import { dijkstra } from "../lib/algorithms/pathFinding/dijkstra";

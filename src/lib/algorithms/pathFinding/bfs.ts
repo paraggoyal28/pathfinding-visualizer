@@ -36,7 +36,7 @@ export const bfs = (grid: GridType, startTile: TileType, endTile: TileType) => {
     while (tile != null) {
         // Backtrack until the start tile
         tile.isPath = true; // Mark the tile as part of the path
-        path.push(tile); // Add the tile to the path
+        path.unshift(tile); // Add the tile to the path
         tile = tile.parent!; // Move to the parent tile
     }
 

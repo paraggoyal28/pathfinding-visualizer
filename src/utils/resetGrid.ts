@@ -30,12 +30,12 @@ export const resetGrid = ({
                     tileElement.className = TILE_STYLE;
                 }
 
-                if (tile.row === MAX_ROWS - 2) {
-                    tileElement?.classList.add("border-5");
+                if (tile.row === MAX_ROWS - 1) {
+                    tileElement?.classList.add("border-b");
                 }
 
                 if (tile.col === 0) {
-                    tileElement?.classList.add("border-1");
+                    tileElement?.classList.add("border-l");
                 }
             }
         }

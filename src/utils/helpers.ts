@@ -61,3 +61,22 @@ export const getRandInt = (min: number, max: number) => {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
 };
+
+export const checkStack = (tile: TileType, stack: TileType[]) => {
+    for (let i = 0; i < stack.length; ++i) {
+        if (isEqual(stack[i], tile)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+export const dropFromQueue = (tile: TileType, unTraversedTiles: TileType[]) => {
+    for (let i = 0; i < unTraversedTiles.length; ++i) {
+        if (isEqual(unTraversedTiles[i], tile)) {
+            unTraversedTiles.splice(i, 1);
+            break;
+        }
+    }
+}
